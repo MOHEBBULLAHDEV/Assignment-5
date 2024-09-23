@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Date, Time, Weekday, and Time Zone</title>
+    <title>Tailwind CSS Modal Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Add some custom styles here */
+    </style>
 </head>
-<body>
-    <h1>Local Date, Time, and Weekday</h1>
-    <p id="weekday"></p>
-    <p id="localDate"></p>
-    <p id="localTime"></p>
-    <p id="localDateTime"></p>
-    <p id="timeZone"></p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    <script>
-        const now = new Date();
+<!-- Trigger Button -->
+<button id="openModalBtn" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Open Modal</button>
 
-        // Get weekday
-        const options = { weekday: 'long' }; // 'long' for full name, 'short' for abbreviated
-        const weekday = now.toLocaleDateString(undefined, options); // e.g., "Monday"
+<!-- The Modal -->
+<div id="myModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+        <h2 class="text-xl font-semibold mb-4">Custom Modal</h2>
+        <p>This is a simple Tailwind CSS modal example.</p>
+        <div class="flex justify-end mt-4">
+            <button id="closeModalBtn" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Close</button>
+        </div>
+    </div>
+</div>
 
-        // Get local date
-        const localDate = now.toLocaleDateString();
-        // Get local time
-        const localTime = now.toLocaleTimeString();
-        // Get local date and time
-        const localDateTime = now.toLocaleString();
-        // Get time zone
-        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+<script>
+    // Get modal elements
+    const modal = document.getElementById('myModal');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
 
-        document.getElementById('weekday').textContent = "Weekday: " + weekday;
-        document.getElementById('localDate').textContent = "Local Date: " + localDate;
-        document.getElementById('localTime').textContent = "Local Time: " + localTime;
-        document.getElementById('localDateTime').textContent = "Local Date and Time: " + localDateTime;
-        document.getElementById('timeZone').textContent = "Time Zone: " + timeZone;
-    </script>
+    // Open the modal
+    openModalBtn.onclick = function() {
+        modal.classList.remove('hidden');
+    }
+
+    // Close the modal
+    closeModalBtn.onclick = function() {
+        modal.classList.add('hidden');
+    }
+
+    // Close the modal when clicking outside of the modal content
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    }
+</script>
+
 </body>
 </html>
