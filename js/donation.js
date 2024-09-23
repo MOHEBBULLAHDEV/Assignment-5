@@ -1,6 +1,4 @@
-document
-  .getElementById("btn-donate-noakhali")
-  .addEventListener("click", function (event) {
+ document.getElementById("btn-donate-noakhali").addEventListener("click", function (event) {
     event.preventDefault;
     const accountBalance = parseFloat(
       document.getElementById("account-balance").innerText
@@ -10,11 +8,10 @@ document
     );
 
     const donationAmount = parseFloat(donateBangladesh("donate-for-noakhali"));
-    const currentAccountBalance = accountBalance - donationAmount;
-    console.log(currentAccountBalance);
+    
+    if (accountBalance >= donationAmount && donationAmount > 0) {
+      const currentAccountBalance = accountBalance - donationAmount;
     const currentNoakhaliDonationBalance = noakhaliDonationBalance + donationAmount;
-    console.log(currentNoakhaliDonationBalance);
-    if (currentAccountBalance => donationAmount && donationAmount > 0) {
         document.getElementById('account-balance').innerText = currentAccountBalance;
         document.getElementById('noakhali-donation-balance').innerText = currentNoakhaliDonationBalance;
         
@@ -26,10 +23,7 @@ document
 
 
 
-
-document
-  .getElementById("btn-donate-feni")
-  .addEventListener("click", function (event) {
+ document.getElementById("btn-donate-feni").addEventListener("click", function (event) {
     event.preventDefault;
     const accountBalance = parseFloat(
       document.getElementById("account-balance").innerText
@@ -39,9 +33,10 @@ document
     );
 
     const donationAmount = parseFloat(donateBangladesh("donate-for-feni"));
-    const currentAccountBalance = accountBalance - donationAmount;
+    
+    if (accountBalance >= donationAmount && donationAmount > 0) {
+      const currentAccountBalance = accountBalance - donationAmount;
     const currentFeniDonationBalance = feniDonationBalance + donationAmount;
-    if (accountBalance => donationAmount && donationAmount > 0) {
         document.getElementById('account-balance').innerText = currentAccountBalance;
         document.getElementById('feni-donation-balance').innerText = currentFeniDonationBalance;
         
@@ -52,22 +47,20 @@ document
 
 
 
-
-document
-  .getElementById("btn-donate-quota")
-  .addEventListener("click", function (event) {
+ document.getElementById("btn-donate-quota").addEventListener("click", function (event) {
     event.preventDefault;
     const accountBalance = parseFloat(
       document.getElementById("account-balance").innerText
     );
-    const feniDonationBalance = parseFloat(
+    const quotaDonationBalance = parseFloat(
       document.getElementById("quota-donation-balance").innerText
     );
 
     const donationAmount = parseFloat(donateBangladesh("donate-for-quota"));
-    const currentAccountBalance = accountBalance - donationAmount;
-    const currentQuotaDonationBalance = feniDonationBalance + donationAmount;
-    if (accountBalance => donationAmount && donationAmount > 0) {
+    
+    if (accountBalance >= donationAmount && donationAmount > 0) {
+      const currentAccountBalance = accountBalance - donationAmount;
+    const currentQuotaDonationBalance = quotaDonationBalance + donationAmount;
         document.getElementById('account-balance').innerText = currentAccountBalance;
         document.getElementById('quota-donation-balance').innerText = currentQuotaDonationBalance;
         
