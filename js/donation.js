@@ -14,12 +14,14 @@ document.getElementById("btn-donate-noakhali").addEventListener("click", functio
   const currentNoakhaliDonationBalance = noakhaliDonationBalance + donationAmount;
       document.getElementById('account-balance').innerText = currentAccountBalance;
       document.getElementById('noakhali-donation-balance').innerText = currentNoakhaliDonationBalance;
+      const title = document.getElementById('noakhali-title').innerText;
       const section = document.getElementById('history-section');
+      const d = new Date();
+d.setFullYear(2024);
 
       const div = document.createElement('div');
-      div.classList.add('border','rounded-md','h-24','text-center','my-8','py-4');
-      div.innerHTML = `<p>${currentNoakhaliDonationBalance}This is current Noakhali Balance</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi vitae quo voluptas.</p>`
+      div.classList.add('border','rounded-md','h-24','pl-4','my-8','py-4');
+      div.innerHTML = `<p>${donationAmount} ${title}</p> <p>Date: ${d}</p>`
       section.appendChild(div)
       
      
@@ -48,12 +50,14 @@ document.getElementById("btn-donate-feni").addEventListener("click", function (e
   const currentFeniDonationBalance = feniDonationBalance + donationAmount;
       document.getElementById('account-balance').innerText = currentAccountBalance;
       document.getElementById('feni-donation-balance').innerText = currentFeniDonationBalance;
+      const title = document.getElementById('feni-title').innerText;
       const section = document.getElementById('history-section');
+      const d = new Date();
+d.setFullYear(2024);
 
       const div = document.createElement('div');
-      div.classList.add('border','rounded-md','h-24','text-center','my-8','py-4');
-      div.innerHTML = `<p>${currentFeniDonationBalance}This is current Noakhali Balance</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi vitae quo voluptas.</p>`
+      div.classList.add('border','rounded-md','h-24','pl-4','my-8','py-4');
+      div.innerHTML = `<p>${donationAmount} ${title}</p> <p>Date: ${d}</p>`
       section.appendChild(div)
       
   }
@@ -79,12 +83,14 @@ document.getElementById("btn-donate-quota").addEventListener("click", function (
   const currentQuotaDonationBalance = quotaDonationBalance + donationAmount;
       document.getElementById('account-balance').innerText = currentAccountBalance;
       document.getElementById('quota-donation-balance').innerText = currentQuotaDonationBalance;
+      const title = document.getElementById('quota-title').innerText;
       const section = document.getElementById('history-section');
+      const d = new Date();
+d.setFullYear(2024);
 
       const div = document.createElement('div');
-      div.classList.add('border','rounded-md','h-24','text-center','my-8','py-4');
-      div.innerHTML = `<p>${currentQuotaDonationBalance}This is current Noakhali Balance</p> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi vitae quo voluptas.</p>`
+      div.classList.add('border','rounded-md','h-24','pl-4','my-8','py-4');
+      div.innerHTML = `<p>${donationAmount} ${title}</p> <p>Date: ${d}</p>`
       section.appendChild(div)
       
   }

@@ -3,49 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Tailwind Modal Example</title>
+    <title>Local Date, Time, Weekday, and Time Zone</title>
 </head>
-<body class="flex items-center justify-center h-screen">
-
-    <!-- Button to trigger modal -->
-    <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded">Open Modal</button>
-
-    <!-- Modal Structure -->
-    <div id="myModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center">
-        <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm mx-auto">
-            <h2 class="text-lg font-bold">Modal Title</h2>
-            <p>This is a sample modal content.</p>
-            <div class="mt-4">
-                <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded">Close</button>
-            </div>
-        </div>
-    </div>
+<body>
+    <h1>Local Date, Time, and Weekday</h1>
+    <p id="weekday"></p>
+    <p id="localDate"></p>
+    <p id="localTime"></p>
+    <p id="localDateTime"></p>
+    <p id="timeZone"></p>
 
     <script>
-        const openModalButton = document.getElementById('openModal');
-        const closeModalButton = document.getElementById('closeModal');
-        const modal = document.getElementById('myModal');
-        const condition = true; // Change this to test the condition
+        const now = new Date();
 
-        openModalButton.addEventListener('click', () => {
-            if (condition) {
-                modal.classList.remove('hidden'); // Show the modal
-            } else {
-                alert('Condition not met');
-            }
-        });
+        // Get weekday
+        const options = { weekday: 'long' }; // 'long' for full name, 'short' for abbreviated
+        const weekday = now.toLocaleDateString(undefined, options); // e.g., "Monday"
 
-        closeModalButton.addEventListener('click', () => {
-            modal.classList.add('hidden'); // Hide the modal
-        });
+        // Get local date
+        const localDate = now.toLocaleDateString();
+        // Get local time
+        const localTime = now.toLocaleTimeString();
+        // Get local date and time
+        const localDateTime = now.toLocaleString();
+        // Get time zone
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-        // Optional: Close modal when clicking outside of it
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-            }
-        });
+        document.getElementById('weekday').textContent = "Weekday: " + weekday;
+        document.getElementById('localDate').textContent = "Local Date: " + localDate;
+        document.getElementById('localTime').textContent = "Local Time: " + localTime;
+        document.getElementById('localDateTime').textContent = "Local Date and Time: " + localDateTime;
+        document.getElementById('timeZone').textContent = "Time Zone: " + timeZone;
     </script>
 </body>
 </html>
