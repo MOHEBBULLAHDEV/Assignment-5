@@ -13,23 +13,27 @@
   </head>
 
   <body>
-    <header class="sticky top-0 z-10 bg-gray-50">
+    <header class="sticky top-0 z-10 bg-gray-50"></header>
       <div class="bg-[#F9F7F3]">
         <div class="container mx-auto">
-          <div class="navbar pt-4 pb-14">
-            <div class="navbar-start">
+          <!-- nav bar -->
+          <div class=" md:flex  md:justify-between pt-4 pb-14">
+            <!-- navbar start -->
+            <div class="flex justify-center md:justify-between">
               <button onclick="document.location.href = 'blog.html'"
                 class="btn btn-active text-black text-2xl bg-[#B4F461] hover:bg-[#B4F461]"
               >
                 Blog
               </button>
             </div>
-            <div class="navbar-center">
+            <!-- navbar center -->
+            <div class="flex items-center justify-center md:justify-between">
               <img src="assets/logo.png" alt="" />
               <h3 class="text-2xl font-bold ml-3">Donate Bangladesh</h3>
             </div>
-            <div class="navbar-end">
-              <ul class="flex justify-center items-center">
+            <!-- navbar end -->
+            <div>
+              <ul class="flex items-center justify-center md:justify-between">
                 <li><img src="assets/coin.png" alt="" /></li>
                 <li class="text-2xl ml-2"><span id="account-balance">500000000 </span>BDT</li>
               </ul>
@@ -108,9 +112,7 @@
         </div>
         <div id="myModal" class="fixed inset-10 items-center flex justify-center hidden">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <h2 class="text-2xl font-semibold mb-4 text-center">congrats!</h2>
-              <img src="assets/coin.png" alt="" class="mx-auto">
-              
+              <h2 class="text-2xl font-semibold mb-4 text-center">congrats!</h2>              
               <p class="text-center">You Have Donated for Humankind</p>
               <h3 class="text-center">Successfully</h3>
               <div class="flex justify-end mt-4">

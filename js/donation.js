@@ -84,7 +84,6 @@ document
           }
         });
       });
-      
     } else {
       alert("Please Enter valid Input");
     }
