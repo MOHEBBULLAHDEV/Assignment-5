@@ -33,11 +33,7 @@ document
       const closeModalBtn = document.getElementById("closeModalBtn");
       closeModalBtn.addEventListener("click", function () {
         modal.classList.add("hidden");
-        window.addEventListener("click", function (event) {
-          if (event.target === modal) {
-            modal.classList.add("hidden");
-          }
-        });
+
       });
     } else {
       alert("Please Enter valid Input");
@@ -78,12 +74,9 @@ document
       const closeModalBtn = document.getElementById("closeModalBtn");
       closeModalBtn.addEventListener("click", function () {
         modal.classList.add("hidden");
-        window.addEventListener("click", function (event) {
-          if (event.target === modal) {
-            modal.classList.add("hidden");
-          }
-        });
+
       });
+      
     } else {
       alert("Please Enter valid Input");
     }
@@ -123,11 +116,7 @@ document
       const closeModalBtn = document.getElementById("closeModalBtn");
       closeModalBtn.addEventListener("click", function () {
         modal.classList.add("hidden");
-        window.addEventListener("click", function (event) {
-          if (event.target === modal) {
-            modal.classList.add("hidden");
-          }
-        });
+
       });
     } else {
       alert("Please Enter valid Input");
