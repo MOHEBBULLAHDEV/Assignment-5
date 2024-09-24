@@ -25,7 +25,7 @@ document
       d.setFullYear(2024);
 
       const div = document.createElement("div");
-      div.classList.add("border", "rounded-md", "h-24", "pl-4", "my-8", "py-4");
+      div.classList.add("border", "rounded-md",  "pl-4", "my-8", "py-4");
       div.innerHTML = `<p>${donationAmount} ${title}</p> <p>Date: ${d}</p>`;
       section.appendChild(div);
       const modal = document.getElementById("myModal");
@@ -70,7 +70,7 @@ document
       d.setFullYear(2024);
 
       const div = document.createElement("div");
-      div.classList.add("border", "rounded-md", "h-24", "pl-4", "my-8", "py-4");
+      div.classList.add("border", "rounded-md",  "pl-4", "my-8", "py-4");
       div.innerHTML = `<p>${donationAmount} ${title}</p> <p>Date: ${d}</p>`;
       section.appendChild(div);
       const modal = document.getElementById("myModal");
@@ -115,7 +115,7 @@ document
       d.setFullYear(2024);
 
       const div = document.createElement("div");
-      div.classList.add("border", "rounded-md", "h-24", "pl-4", "my-8", "py-4");
+      div.classList.add("border", "rounded-md",  "pl-4", "my-8", "py-4");
       div.innerHTML = `<p>${donationAmount} ${title}</p> <p>Date: ${d}</p>`;
       section.appendChild(div);
       const modal = document.getElementById("myModal");
